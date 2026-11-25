@@ -1,7 +1,7 @@
 /* FLORAISON · "Petal to Petal Autumn" theme player (loops the Suno track) */
 (function(){
   const me=document.currentScript&&document.currentScript.src||location.href;
-  const SRC=new URL('audio/petal-to-petal-autumn.mp3',me).href;
+  let SRC=new URL('audio/petal-to-petal-autumn.mp3',me).href;const ALT=new URL('petal-to-petal-autumn.mp3',me).href;
   const css=`#fl-sound{position:fixed;left:18px;bottom:14px;z-index:80;display:flex;align-items:center;gap:10px;height:40px;padding:0 16px 0 14px;border-radius:20px;background:rgba(12,12,11,.78);color:#fbfaf7;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);font:400 10px/1 "Space Mono","Courier New",monospace;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
 #fl-sound:hover{border-color:#fbfaf7}#fl-sound:focus-visible{outline:2px solid #fbfaf7;outline-offset:3px}
 #fl-sound .eq{display:flex;gap:2px;align-items:flex-end;height:12px}#fl-sound .eq i{width:2px;height:3px;background:currentColor;border-radius:1px}
@@ -15,7 +15,7 @@
   b.innerHTML='<span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="tx">Sound · Autumn</span>';
   document.body.appendChild(b);
   const tx=b.querySelector('.tx');
-  fetch(SRC,{method:'HEAD'}).then(r=>{if(!r.ok)throw 0}).catch(()=>{b.disabled=true;b.style.opacity='.55';b.style.cursor='default';tx.textContent='Theme · Soon'});
+  fetch(SRC,{method:'HEAD'}).then(r=>{if(!r.ok)throw 0}).catch(()=>fetch(ALT,{method:'HEAD'}).then(r=>{if(!r.ok)throw 0;SRC=ALT;if(a)a.src=SRC})).catch(()=>{b.disabled=true;b.style.opacity='.55';b.style.cursor='default';tx.textContent='Theme · Soon'});
   let a=null,on=false,fade=null,wasOn=false;
   const TARGET=.8;
   function ramp(to,ms,done){
