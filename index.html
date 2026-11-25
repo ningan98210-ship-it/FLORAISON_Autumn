@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLORAISON Autumn / Winter 2027</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#1A1220}
+#v{position:fixed;inset:0;width:100%;height:100%;border:0;display:block}
+</style>
+</head>
+<body>
+<iframe id="v" title="FLORAISON Autumn / Winter 2027" allow="autoplay; clipboard-write"></iframe>
+<script>
+(function(){
+  var PAGES={ball:1,programme:1,letters:1};
+  var q=new URLSearchParams(location.search),p=q.get('p');if(!PAGES[p])p='ball';
+  var v=document.getElementById('v');
+  window.FL_SHELL={sync:function(page,hash,title){if(!PAGES[page])return;try{history.replaceState(null,'',location.pathname+(page==='ball'?'':'?p='+page)+(hash||''))}catch(e){}if(title)document.title=title}};
+  v.src=p+'.html'+location.hash;
+  v.addEventListener('load',function(){try{v.contentWindow.focus()}catch(e){}});
+})();
+</script>
+<script src="music.js"></script>
+</body>
+</html>

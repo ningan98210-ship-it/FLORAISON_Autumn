@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script>(function(){var inShell=false;try{inShell=!!(window.parent!==window&&window.parent.FL_SHELL)}catch(e){}
+if(!inShell&&!/[?&]solo/.test(location.search)){location.replace('index.html?p=letters'+location.hash)}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLORAISON AW27 · Letters 信箋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Pinyon+Script&family=Space+Mono:wght@400;700&family=Noto+Serif+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A15A;--gold2:#E3C98F;--wine:#7A1E2C;--ink:#20161C;--paper:#FBF5EA;--mute:#8A7A6E;--home:#FFF3E2;
+--serif:"Bodoni Moda","Didot","Times New Roman",serif;--script:"Pinyon Script",cursive;--mono:"Space Mono","Courier New",monospace;--cjk:"Noto Serif TC","Songti TC",serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--home);color:var(--ink);font-family:var(--cjk);background-image:radial-gradient(rgba(178,100,60,.08) 1px,transparent 1px);background-size:18px 18px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+.lab{font:400 10px/1.4 var(--mono);letter-spacing:.22em;text-transform:uppercase}
+.top{display:flex;align-items:center;justify-content:space-between;height:54px;padding:0 clamp(16px,4vw,48px)}
+.top a{text-decoration:none;opacity:.8}.top a:hover{opacity:1;color:var(--wine)}
+.brand{font:500 17px var(--serif);letter-spacing:.32em}
+header{text-align:center;padding:60px 20px 40px}
+header h1{font:italic 400 clamp(44px,7vw,92px)/1 var(--serif);margin:10px 0}
+header p{font-size:15px;letter-spacing:.1em;line-height:2;margin:8px 0 0}
+.box{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:34px 28px;max-width:1300px;margin:0 auto;padding:20px clamp(16px,4vw,48px) 100px}
+.env{position:relative;aspect-ratio:1.5/1;border-radius:4px;cursor:pointer;transition:transform .35s;box-shadow:0 14px 26px rgba(80,40,30,.22);overflow:hidden}
+.env:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 22px 40px rgba(80,40,30,.32)}
+.env:hover .seal{transform:translate(-50%,-50%) scale(.8) rotate(20deg)}
+.env .to{z-index:2}
+.env .bg{position:absolute;inset:0}
+.env .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(0,0,0,.12))}
+.env .pk{position:absolute;left:10%;width:80%;top:8%;border:4px solid #FBF5EA;transform:translateY(135%);transition:transform .55s cubic-bezier(.3,1.3,.5,1);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.env:hover .pk{transform:translateY(-4%)}
+.env:hover .fl{transform:translateY(-100%)}
+.env .fl{transition:transform .5s;z-index:1;position:absolute;left:0;right:0;top:0;height:60%;clip-path:polygon(0 0,100% 0,50% 100%);filter:brightness(.88)}
+.env .seal{z-index:2;transition:transform .4s;position:absolute;left:50%;top:60%;width:50px;height:50px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 38% 34%,#B23A48,#7A1E2C 55%,#4E1220);box-shadow:0 4px 8px rgba(0,0,0,.35),inset 0 -3px 6px rgba(0,0,0,.3);display:grid;place-items:center;color:var(--gold2);font:italic 400 15px var(--serif)}
+.env .to{position:absolute;left:14px;bottom:12px;right:14px;display:flex;justify-content:space-between;align-items:flex-end;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.env .to b{font:500 14px var(--cjk);letter-spacing:.06em}
+/* reader */
+#rd{position:fixed;inset:0;z-index:50;background:rgba(32,22,28,.72);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+#rd.on{display:flex}
+.wrap{position:relative;width:min(760px,96vw)}
+.slot{position:relative;height:0;padding-bottom:22%}
+.slot .e2{position:absolute;left:4%;right:4%;bottom:0;height:200%;border-radius:4px;transform:translateY(55%);z-index:0}
+.card{position:relative;z-index:1;perspective:2000px;transform:translateY(40px);opacity:0;transition:transform .9s cubic-bezier(.3,.1,.2,1) .15s,opacity .5s .15s}
+#rd.on .card{transform:none;opacity:1}
+.fl3{position:relative;transform-style:preserve-3d;transition:transform .9s}
+.card.b .fl3{transform:rotateY(180deg)}
+.fc,.bc{backface-visibility:hidden;background:var(--paper);border-radius:12px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.bc{position:absolute;inset:0;transform:rotateY(180deg);padding:clamp(20px,4vw,44px);display:flex;flex-direction:column;background:var(--paper) repeating-linear-gradient(transparent 0 31px,rgba(178,100,60,.13) 31px 32px)}
+.fc img{width:100%;aspect-ratio:1216/832;object-fit:cover}
+.fc .t{padding:16px 22px 20px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:end}
+.fc .n{font:italic 400 40px/1 var(--serif);color:#B2643C}
+.fc .pr{font:500 18px/1.3 var(--cjk);text-align:right}
+.fc .d{grid-column:1/-1;font-size:14px;line-height:1.8}
+.bc h4{font:500 24px var(--cjk);margin:8px 0 14px}
+.bc{overflow:auto;scrollbar-width:thin}
+.bc p{font-size:15px;line-height:2;margin:0}
+.rc{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-top:22px;padding-top:16px;border-top:1px dashed rgba(178,100,60,.45)}
+.rc h5{margin:0 0 6px;font:500 16px var(--cjk);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.rc h5 span{font:400 10px var(--mono);letter-spacing:.14em;color:#B2643C;white-space:nowrap}
+.rc ul{list-style:none;margin:0;padding:0}
+.rc li{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;line-height:1.55;padding:5px 0;border-bottom:1px dotted rgba(32,22,28,.2);opacity:0;transform:translateX(-8px);transition:opacity .4s,transform .4s}
+.card.b .rc li{opacity:1;transform:none}
+.rc li b{font-weight:400}
+.rc li i{font-style:normal;color:#8A5A3C;text-align:right;flex:0 0 auto;max-width:55%}
+@media(max-width:600px){.rc{grid-template-columns:1fr}}
+.bc .sig{margin-top:auto;padding-top:12px;font:400 26px var(--script);color:var(--wine)}
+.acts{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.acts button{background:var(--paper);border-radius:20px;padding:10px 16px}
+.acts button:hover{background:var(--gold)}
+.navx{position:absolute;top:40%;width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font:400 18px var(--serif)}
+.navx.p{left:-60px}.navx.n{right:-60px}
+@media(max-width:900px){.navx{display:none}}
+@media(max-width:600px){.top>span{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><a href="ball.html" class="brand">FLORAISON</a><span class="lab">Letters · 信箋</span><a href="programme.html" class="lab">← Programme</a></div>
+<header><div class="lab" style="color:var(--wine)">Eighteen sealed letters · 十八封封緘的信</div><h1>Letters</h1><p>拆開火漆，裡面是一張食譜卡，可以下載。</p></header>
+<div class="box" id="box"></div>
+<div id="rd" role="dialog" aria-modal="true"><div class="wrap">
+  <button class="navx p lab" id="pv" aria-label="previous">‹</button><button class="navx n lab" id="nx" aria-label="next">›</button>
+  <div class="card" id="cd"><div class="fl3"><div class="fc" id="fc"></div><div class="bc" id="bc"></div></div></div>
+  <div class="acts lab"><button id="flip">Turn over · 翻面</button><button id="dl">Download · 下載食譜卡</button><button id="cl">Close · 關閉</button></div>
+</div></div>
+<canvas id="cv" width="1600" height="2000" style="display:none"></canvas>
+<script src="data.js"></script><script src="fx.js"></script><script src="recipes.js"></script>
+<script>
+const P=window.PAIRS,pad=n=>String(n).padStart(2,'0'),IMG=f=>'img/'+f,$=s=>document.querySelector(s);
+try{const S=window.parent.FL_SHELL;if(S)S.sync('letters',location.hash,document.title)}catch(e){}
+document.querySelectorAll('a[href$=".html"]').forEach(a=>a.addEventListener('click',()=>{try{window.parent.FL_SHELL.sync(a.getAttribute('href').replace('.html',''),'')}catch(_){}}));
+$('#box').innerHTML=P.map(p=>`<div class="env rv" data-n="${p.n}" tabindex="0" role="button" aria-label="${p.l.name} & ${p.r.name}"><div class="bg" style="background:${p.ground.hex}"></div><img class="pk" src="img/${p.img.C.wide}" alt=""><div class="fl" style="background:${p.ground.hex}"></div><div class="seal">${p.n}</div><div class="to"><b>${p.l.name} &amp; ${p.r.name}</b><span class="lab">${p.ground.en}</span></div></div>`).join('');
+let cur=0;const R=window.RECIPES||{};
+const rcHTML=p=>{const r=R[p.n];if(!r)return'';const ul=a=>`<ul>${a.map(([k,v])=>`<li><b>${k}</b><i>${v}</i></li>`).join('')}</ul>`;
+ return `<div class="rc"><div><h5>${p.C.dessert}<span>Dessert · ${r[0]}</span></h5>${ul(r[1])}</div><div><h5>${p.C.drink}<span>Drink · ${r[2]}</span></h5>${ul(r[3])}</div></div>`};
+function setRc(){document.querySelectorAll('#bc .rc li').forEach((li,i)=>li.style.transitionDelay=(.5+i*.05)+'s')}
+function open(n){cur=n;const p=P[n-1];$('#cd').classList.remove('b');
+ $('#fc').innerHTML=`<img src="${IMG(p.img.C.wide)}" alt=""><div class="t"><span class="n">${pad(p.n)}</span><span class="pr">${p.l.name} &amp; ${p.r.name}</span><div class="d"><span class="lab" style="color:var(--mute)">Dessert 甜點</span> ${p.C.dessert}　<span class="lab" style="color:var(--mute)">Drink 熱飲</span> ${p.C.drink}</div></div>`;
+ $('#bc').innerHTML=`<div class="lab" style="color:#B2643C">The Story · 甜點的故事 · No. ${pad(p.n)}</div><h4>${p.storyTitle}</h4><p>${p.story}</p>${rcHTML(p)}<div class="sig">${p.dance.en}</div>`;
+ setRc();
+ $('#rd').classList.add('on')}
+document.querySelectorAll('.env').forEach(e=>{e.onclick=()=>open(+e.dataset.n);e.onkeydown=k=>{if(k.key==='Enter')open(+e.dataset.n)}});
+$('#flip').onclick=()=>$('#cd').classList.toggle('b');$('#cd').onclick=()=>$('#cd').classList.toggle('b');
+$('#cl').onclick=()=>$('#rd').classList.remove('on');$('#rd').onclick=e=>{if(e.target.id==='rd')$('#rd').classList.remove('on')};
+$('#pv').onclick=()=>open(cur>1?cur-1:18);$('#nx').onclick=()=>open(cur<18?cur+1:1);
+addEventListener('keydown',e=>{if(!$('#rd').classList.contains('on'))return;if(e.key==='Escape')$('#cl').click();if(e.key==='ArrowRight')$('#nx').click();if(e.key==='ArrowLeft')$('#pv').click()});
+// download: draw both sides onto one tall card
+function wrap(ctx,text,x,y,w,lh){let line='';for(const ch of text){const t=line+ch;if(ctx.measureText(t).width>w){ctx.fillText(line,x,y);line=ch;y+=lh}else line=t}if(line)ctx.fillText(line,x,y);return y+lh}
+$('#dl').onclick=async()=>{const p=P[cur-1],r=R[p.n],cv=document.createElement('canvas');cv.width=1600;cv.height=4000;const c=cv.getContext('2d');await document.fonts.ready;
+ const img=new Image();img.src=IMG(p.img.C.wide);await img.decode();
+ c.fillStyle='#FBF5EA';c.fillRect(0,0,1600,4000);
+ const ih=1480*img.height/img.width;c.drawImage(img,60,60,1480,ih);let y=60+ih+90;
+ c.fillStyle='#B2643C';c.font='italic 400 84px "Bodoni Moda",serif';c.fillText(pad(p.n),60,y);
+ c.fillStyle='#20161C';c.textAlign='right';c.font='500 46px "Noto Serif TC",serif';c.fillText(`${p.l.name} & ${p.r.name}`,1540,y);c.textAlign='left';
+ y+=70;c.font='400 22px "Space Mono",monospace';c.fillStyle='#8A7A6E';c.fillText(`${p.dance.en.toUpperCase()} · FLORAISON AW27 · 對影`,60,y);
+ y+=70;c.fillStyle='#20161C';c.font='500 40px "Noto Serif TC",serif';c.fillText(p.storyTitle,60,y);
+ y+=66;c.font='400 31px "Noto Serif TC",serif';y=wrap(c,p.story,60,y,1480,56);
+ if(r){y+=20;c.strokeStyle='rgba(178,100,60,.5)';c.setLineDash([8,8]);c.beginPath();c.moveTo(60,y);c.lineTo(1540,y);c.stroke();c.setLineDash([]);y+=70;
+  let yy=y;[[p.C.dessert,r[0],r[1],60],[p.C.drink,r[2],r[3],830]].forEach(([t,q,list,x])=>{let yc=y;
+   c.fillStyle='#20161C';c.font='500 36px "Noto Serif TC",serif';c.fillText(t.length>12?t.slice(0,12)+'…':t,x,yc);
+   c.fillStyle='#B2643C';c.font='400 20px "Space Mono",monospace';c.fillText(q,x,yc+38);yc+=92;
+   list.forEach(([k,v])=>{c.fillStyle='#20161C';c.font='400 26px "Noto Serif TC",serif';
+    c.fillText(k,x,yc,420);c.fillStyle='#8A5A3C';c.textAlign='right';c.font='400 24px "Noto Serif TC",serif';c.fillText(v,x+710,yc,280);c.textAlign='left';
+    c.strokeStyle='rgba(32,22,28,.18)';c.setLineDash([2,6]);c.beginPath();c.moveTo(x,yc+16);c.lineTo(x+710,yc+16);c.stroke();c.setLineDash([]);yc+=52});
+   yy=Math.max(yy,yc)});y=yy}
+ y+=40;c.fillStyle='#7A1E2C';c.font='400 54px "Pinyon Script",cursive';c.fillText(p.dance.en,60,y+20);y+=80;
+ const out=document.createElement('canvas');out.width=1600;out.height=Math.ceil(y);out.getContext('2d').drawImage(cv,0,0);
+ const a=document.createElement('a');a.download=`FLORAISON_AW27_recipe_${pad(p.n)}.png`;a.href=out.toDataURL('image/png');a.click()};
+</script>
+</body>
+</html>

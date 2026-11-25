@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script>(function(){var inShell=false;try{inShell=!!(window.parent!==window&&window.parent.FL_SHELL)}catch(e){}
+if(!inShell&&!/[?&]solo/.test(location.search)){location.replace('index.html?p=programme'+location.hash)}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLORAISON AW27 · The Programme 節目單</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Pinyon+Script&family=Space+Mono:wght@400;700&family=Noto+Serif+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1A1220;--gold:#C9A15A;--gold2:#E3C98F;--wine:#7A1E2C;--ink:#20161C;--paper:#F7EFE2;--mute:#8A7A6E;
+--serif:"Bodoni Moda","Didot","Times New Roman",serif;--script:"Pinyon Script",cursive;--mono:"Space Mono","Courier New",monospace;--cjk:"Noto Serif TC","Songti TC",serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:radial-gradient(ellipse at 50% 30%,#3A2236,#1A1220 60%,#0E0911);color:#F4EADB;font-family:var(--cjk);overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.lab{font:400 10px/1.4 var(--mono);letter-spacing:.22em;text-transform:uppercase}
+.top{position:fixed;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,4vw,48px);z-index:5}
+.top a{color:inherit;text-decoration:none;opacity:.8}.top a:hover{opacity:1;color:var(--gold2)}
+.brand{font:500 17px var(--serif);letter-spacing:.32em}
+.stage{position:absolute;inset:60px 0 70px;display:grid;place-items:center;perspective:2600px}
+.book{position:relative;height:min(78vh,calc((100vw - 60px) * 0.684 / 2 * 1.462));aspect-ratio:1.368/1;display:flex;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
+.page{position:relative;width:50%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}
+.page.L{border-radius:4px 0 0 4px;box-shadow:inset -18px 0 30px -18px rgba(0,0,0,.35)}
+.page.R{border-radius:0 4px 4px 0;box-shadow:inset 18px 0 30px -18px rgba(0,0,0,.3)}
+.turn{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.45,.05,.3,1);z-index:4}
+.turn.back{left:0;transform-origin:100% 50%}
+.turn .side{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;background:var(--paper);color:var(--ink)}
+.turn .side.b{transform:rotateY(180deg)}
+.pg{position:absolute;inset:0;display:flex;flex-direction:column}
+.full img{width:100%;height:100%;object-fit:cover}
+.folio{position:absolute;bottom:14px;font:400 9px var(--mono);letter-spacing:.2em;color:var(--mute)}
+.L .folio,.side.b .folio{left:18px}.R .folio,.side.f .folio{right:18px}
+.full .folio{color:#fff;mix-blend-mode:difference}
+/* cover */
+.cover{background:var(--wine);color:var(--gold2);align-items:center;justify-content:center;text-align:center;gap:14px}
+.cover:before{content:"";position:absolute;inset:16px;border:1px solid rgba(227,201,143,.5)}
+.cover .t{font:400 clamp(22px,3.4vw,46px)/1 var(--serif);letter-spacing:.3em;padding-left:.3em}
+.cover .z{font:500 clamp(40px,7vw,96px)/1 var(--cjk);letter-spacing:.2em;color:#F7EFE2;padding-left:.2em}
+.cover .s{font:italic 400 clamp(13px,1.6vw,18px) var(--serif)}
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;height:100%;background:#0E0911}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+/* contents */
+.toc{padding:9% 9% 7%}
+.toc h3{font:italic 400 clamp(22px,2.6vw,36px)/1 var(--serif);margin:0 0 4%}
+.toc ol{list-style:none;margin:0;padding:0;columns:1;font-size:clamp(10px,1.05vw,13px)}
+.toc li{display:grid;grid-template-columns:28px 1fr auto;gap:8px;padding:.5% 0;border-bottom:1px dotted rgba(32,22,28,.3);cursor:pointer}
+.toc li:hover{color:var(--wine)}
+.toc li span:first-child,.toc li span:last-child{font-family:var(--mono);color:var(--mute)}
+/* pair text page */
+.tx{padding:8% 8% 7%;gap:0}
+.tx .no{font:italic 400 clamp(44px,6vw,92px)/.85 var(--serif);color:var(--wine)}
+.tx .dance{font:italic 400 clamp(20px,2.4vw,34px)/1 var(--serif);margin-top:4%}
+.tx .names{font:500 clamp(14px,1.6vw,20px)/1.4 var(--cjk);margin:3% 0 0;letter-spacing:.06em}
+.tx .names .x{font-family:var(--serif);font-style:italic;color:var(--wine);margin:0 .3em}
+.tx .by{color:var(--mute);margin-top:1%}
+.words{display:grid;grid-template-columns:1fr 1fr;gap:0 6%;margin-top:5%;border-top:1px solid var(--ink)}
+.words div{padding:3% 0;border-bottom:1px solid rgba(32,22,28,.18)}
+.words .k{font:400 8px var(--mono);letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.words .v{font-size:clamp(11px,1.15vw,14px);margin-top:2px}
+.words .v i{font-family:var(--serif);color:var(--mute);margin-left:4px}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:3%;margin-top:auto}
+.thumbs figure{margin:0}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover}
+.thumbs figcaption{font:400 8px var(--mono);letter-spacing:.2em;color:var(--mute);margin-top:4px}
+.pal{display:flex;height:8px;margin-top:4%}.pal i{flex:1}
+.full{background:#120C16}.full img{width:100%;height:100%;object-fit:contain}
+.full .cap{position:absolute;left:14px;top:14px;color:#fff;padding:5px 8px;border-radius:2px;mix-blend-mode:normal}
+.mos{padding:8% 7%;gap:4%}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mosaic img{width:100%;aspect-ratio:1;object-fit:cover;cursor:pointer;outline:0 solid var(--g);transition:outline-width .2s,transform .2s}
+.mosaic img:hover{outline-width:4px;transform:scale(1.04)}
+.tx .band{position:absolute;left:0;right:0;top:0;height:6px}
+.pnote{margin-top:auto;font-size:clamp(10px,1vw,13px);line-height:1.9;padding:4% 5%;background:#F3E6CF;border-left:3px solid var(--g)}
+.pnote:before{content:"A Note";display:block;font:400 clamp(16px,1.6vw,22px)/1 var(--script);color:var(--wine);margin-bottom:4px}
+.cpage{padding:6% 6% 7%;gap:3%}
+.cpage img{width:100%;height:auto;border-radius:3px}
+.cpage .dd{font:500 clamp(14px,1.5vw,20px)/1.35 var(--cjk);margin-top:2%}
+.cpage .dd span{display:block;font-size:.72em;color:var(--mute)}
+.cpage p{font-size:clamp(9.5px,.95vw,12.5px);line-height:1.95;margin:2% 0 0;overflow:auto}
+.cpage .pal{margin-top:auto}
+.toc li{transition:background .3s,color .3s;padding-left:4px}
+.toc li:hover{background:var(--g);color:#fff}
+.toc li:hover span{color:#fff}
+.back{background:#1A1220;color:var(--gold2);align-items:center;justify-content:center;text-align:center;gap:10px}
+.back .t{font:400 clamp(18px,2.4vw,30px) var(--serif);letter-spacing:.4em}
+.ctrl{position:fixed;bottom:16px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:24px}
+.ctrl button{border:1px solid rgba(201,161,90,.5);border-radius:20px;padding:9px 16px}
+.ctrl button:hover{background:var(--gold);color:var(--ink)}
+.ctrl button:disabled{opacity:.3;pointer-events:none}
+#pos{min-width:90px;text-align:center}
+@media(max-width:760px){.book{aspect-ratio:.684/1;height:min(76vh,calc((100vw - 30px)*1.462))}.page{width:100%}.page.L{display:none}.page.R{border-radius:4px}.turn{display:none}}
+@media(max-width:600px){.top>span{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><a href="ball.html" class="brand">FLORAISON</a><span class="lab">The Programme · 節目單 · 對影秋季號</span><a href="letters.html" class="lab">Letters →</a></div>
+<div class="stage"><div class="book" id="book"></div></div>
+<div class="ctrl lab"><button id="prev">← Prev 上一頁</button><span id="pos"></span><button id="next">Next 下一頁 →</button></div>
+<script src="data.js"></script><script src="fx.js"></script>
+<script>
+const P=window.PAIRS,pad=n=>String(n).padStart(2,'0'),IMG=f=>'img/'+f;
+try{const S=window.parent.FL_SHELL;if(S)S.sync('programme',location.hash,document.title)}catch(e){}
+document.querySelectorAll('a[href$=".html"]').forEach(a=>a.addEventListener('click',()=>{try{window.parent.FL_SHELL.sync(a.getAttribute('href').replace('.html',''),'')}catch(_){}}));
+// build pages (flat list, pages[0] is right page of first spread)
+const pages=[];
+pages.push(`<div class="pg cover"><div class="lab">Autumn / Winter 2027 · Issue 03</div><div class="t">FLORAISON</div><div class="z">對影</div><div class="s">Two by Two · The Programme</div><div class="lab" style="margin-top:20px">Eighteen Pairs · Fifty-four Looks</div></div>`);
+pages.push(`<div class="pg mos"><div class="lab" style="color:var(--wine)">The Pairs · 十八對</div><div class="mosaic">${P.map(p=>`<img src="${IMG(p.img.A.sq||p.img.A.wide)}" alt="" data-go="${3+(p.n-1)*4}" style="--g:${p.ground.hex}">`).join('')}</div></div>`);
+pages.push(`<div class="pg toc"><div class="lab" style="color:var(--wine)">Contents · 目錄</div><h3>Carnet de Bal</h3><ol>${P.map((p,i)=>`<li data-go="${3+i*4}" style="--g:${p.ground.hex}"><span>${pad(p.n)}</span><span>${p.dance.en} · ${p.l.name} &amp; ${p.r.name}</span><span>${pad(3+i*4)}</span></li>`).join('')}</ol></div>`);
+P.forEach(p=>{
+  const g=p.ground.hex;
+  pages.push(`<div class="pg full"><img src="${IMG(p.img.A.tall||p.img.A.wide)}" alt="${p.l.name} & ${p.r.name}"><span class="cap lab" style="background:${g}">${pad(p.n)} · A · The Ball</span></div>`);
+  pages.push(`<div class="pg tx" style="--g:${g}"><div class="band" style="background:${g}"></div><div class="no">${pad(p.n)}</div><div class="dance">${p.dance.en}</div><div class="lab" style="color:var(--wine);margin-top:1%">${p.dance.zh}</div>
+   <div class="names">${p.l.name}<span class="x">&amp;</span>${p.r.name}</div><div class="by lab">${p.l.by===p.r.by?p.l.by:p.l.by+' · '+p.r.by} · ${p.bond==='F'?'Family 家人':'Lovers 戀人'}</div>
+   <div class="words">
+    <div><div class="k">Motif 主線</div><div class="v">${p.motif.zh}<i>${p.motif.en}</i></div></div>
+    <div><div class="k">Ground 背景</div><div class="v">${p.ground.zh}<i>${p.ground.en}</i></div></div>
+    <div><div class="k">Time 拍號</div><div class="v">${p.dance.time}</div></div>
+    <div><div class="k">Keepsake 信物</div><div class="v">${p.keep.name}</div></div>
+   </div>
+   <div class="pal">${p.img.A.pal.map(c=>`<i style="background:${c}"></i>`).join('')}</div>
+   <div class="pnote">${p.note}</div></div>`);
+  pages.push(`<div class="pg full"><img src="${IMG(p.img.B.tall||p.img.B.wide)}" alt=""><span class="cap lab" style="background:${g}">${pad(p.n)} · B · Rendez-vous</span></div>`);
+  pages.push(`<div class="pg cpage"><img src="${IMG(p.img.C.wide)}" alt=""><div class="ct"><div class="lab" style="color:#B2643C">${pad(p.n)} · C · At Home 回家</div><div class="dd">${p.C.dessert}<span>＋ ${p.C.drink}</span></div><p>${p.story}</p></div><div class="pal">${p.img.C.pal.map(c=>`<i style="background:${c}"></i>`).join('')}</div></div>`);
+});
+pages.push(`<div class="pg back"><div class="lab">Fin · 散場</div><div class="t">FLORAISON</div><div style="font:400 28px var(--script)">Petal to Petal Autumn</div><div class="lab" style="margin-top:12px">Editor-in-Chief 總編輯 · 寧安</div></div>`);
+// spreads: spread 0 = [blank, pages[0]], spread k = [pages[2k-1], pages[2k]]
+const nSpreads=Math.ceil((pages.length+1)/2);
+const mobile=()=>matchMedia('(max-width:760px)').matches;
+let s=0,mp=0,busy=false;
+const book=document.getElementById('book');
+const pageHTML=(i,side)=>i>=0&&i<pages.length?`<div class="page ${side}">${pages[i]}<span class="folio">${i>0?pad(i):''}</span></div>`:`<div class="page ${side}" style="background:transparent;box-shadow:none"></div>`;
+function L(k){return 2*k-1}function R(k){return 2*k}
+function render(){
+  if(mobile()){book.innerHTML=pageHTML(mp,'R');pos.textContent=`${mp+1} / ${pages.length}`;prev.disabled=mp===0;next.disabled=mp===pages.length-1;bind();return}
+  book.innerHTML=pageHTML(L(s),'L')+pageHTML(R(s),'R');pos.textContent=`${s+1} / ${nSpreads}`;prev.disabled=s===0;next.disabled=s===nSpreads-1;bind()}
+function bind(){book.querySelectorAll('[data-go]').forEach(li=>li.onclick=()=>{const pi=+li.dataset.go;if(mobile()){mp=pi;render()}else{go(Math.ceil(pi/2))}})}
+function go(t){if(busy||t===s||t<0||t>=nSpreads)return;
+  const fwd=t>s;busy=true;
+  const turn=document.createElement('div');turn.className='turn'+(fwd?'':' back');
+  const frontI=fwd?R(s):L(s),backI=fwd?L(t):R(t);
+  turn.innerHTML=`<div class="side f">${pages[frontI]||''}</div><div class="side b">${pages[backI]||''}</div>`;
+  // underlying pages show the destination's other side
+  if(fwd){book.children[1].outerHTML=pageHTML(R(t),'R')}else{book.children[0].outerHTML=pageHTML(L(t),'L')}
+  book.appendChild(turn);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{turn.style.transform=fwd?'rotateY(-180deg)':'rotateY(180deg)'}));
+  setTimeout(()=>{s=t;busy=false;render()},920)}
+prev.onclick=()=>{if(mobile()){if(mp>0){mp--;render()}}else go(s-1)};
+next.onclick=()=>{if(mobile()){if(mp<pages.length-1){mp++;render()}}else go(s+1)};
+addEventListener('keydown',e=>{if(e.key==='ArrowRight')next.click();if(e.key==='ArrowLeft')prev.click()});
+let tx=null;addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)(d<0?next:prev).click();tx=null});
+addEventListener('resize',render);render();
+</script>
+</body>
+</html>

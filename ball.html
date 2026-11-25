@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<script>/* open inside the music shell so the soundtrack never stops */
+(function(){var inShell=false;try{inShell=!!(window.parent!==window&&window.parent.FL_SHELL)}catch(e){}
+if(!inShell&&!/[?&]solo/.test(location.search)){location.replace('index.html?p=ball'+location.hash)}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLORAISON Autumn / Winter 2027 · 對影</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Pinyon+Script&family=Space+Mono:wght@400;700&family=Noto+Serif+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE  a couture ball programme: formal, romantic, lit by chandeliers
+   IDEA   one evening told as pages: an invitation, a dance card, three acts, a box of keepsakes
+   PICTURE the eighteen pairs themselves; every surface takes the colour of the pair you point at
+   COLOUR night plum, oat daylight, warm home cream; each pair lends its own ground and palette
+   TYPE   Bodoni Moda italic display, Pinyon Script for names, Noto Serif TC body, Space Mono labels */
+:root{
+  --night:#1A1220;--day:#F2E9DA;--home:#FFF3E2;--gold:#C9A15A;--gold2:#E3C98F;--wine:#7A1E2C;--ink:#20161C;--mute:#8A7A6E;
+  --serif:"Bodoni Moda","Didot","Times New Roman",serif;--script:"Pinyon Script",cursive;
+  --mono:"Space Mono","Courier New",monospace;--cjk:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --bg:var(--night);--fg:#F4EADB;--acc:var(--gold2);
+}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--cjk);-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background .8s ease,color .8s ease}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+a{color:inherit;text-decoration:none}
+.lab{font:400 10px/1.5 var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.wd{font-family:var(--serif);font-weight:400}
+.pad{padding-left:clamp(16px,5vw,72px);padding-right:clamp(16px,5vw,72px)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;height:58px;display:flex;align-items:center;gap:18px;justify-content:space-between;
+  background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid color-mix(in srgb,var(--fg) 14%,transparent);transition:background .8s}
+nav .brand{flex:0 0 auto;font:500 18px/1 var(--serif);letter-spacing:.3em;white-space:nowrap}
+nav .brand i{font-family:var(--cjk);font-style:normal;font-size:13px;letter-spacing:.2em;margin-left:8px;color:var(--acc)}
+.tabs{flex:1 1 auto;justify-content:flex-end;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{position:relative;isolation:isolate;flex:0 0 auto;padding:9px 12px;border-radius:30px;white-space:nowrap;transition:color .3s}
+.tabs a:before{content:"";position:absolute;inset:0;border-radius:30px;background:var(--hc,var(--acc));transform:scale(.4);opacity:0;transition:transform .35s cubic-bezier(.3,1.4,.5,1),opacity .3s;z-index:-1}
+.tabs a:hover:before,.tabs a.on:before{transform:scale(1);opacity:1}
+.tabs a:hover,.tabs a.on{color:var(--hf,var(--ink))}
+.tabs a b{font-family:var(--cjk);font-weight:500;letter-spacing:.1em;margin-left:4px}
+@media(max-width:1100px){.tabs a .en{display:none}}
+@media(max-width:700px){.tabs{justify-content:flex-start}nav{gap:8px}nav .brand{font-size:14px;letter-spacing:.2em}nav .brand i{display:none}}
+
+.view{display:none;min-height:100vh;padding-top:58px}
+.view.on{display:block;animation:vin .7s ease}
+@keyframes vin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- invitation ---------- */
+#v-invite .hero{min-height:calc(100vh - 58px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(20px,5vw,80px);position:relative;overflow:hidden}
+.hero .copy h1{font:italic 400 clamp(52px,8.5vw,128px)/.88 var(--serif);margin:0;background:linear-gradient(100deg,#F4EADB 10%,#E3C98F 40%,#D97C5B 65%,#B88BD9 90%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:sheen 9s ease-in-out infinite alternate}
+@keyframes sheen{to{background-position:100% 0}}
+.hero .copy .z{font:500 clamp(28px,4vw,52px)/1 var(--cjk);letter-spacing:.4em;margin:18px 0 10px;color:var(--gold2)}
+.hero .copy p{font-size:16px;line-height:2;max-width:430px;opacity:.85;margin:18px 0 0}
+.hero .copy .go{display:inline-flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid color-mix(in srgb,var(--fg) 35%,transparent);border-radius:40px;padding:12px 18px;transition:all .3s}
+.pill:hover{background:var(--hc,var(--gold2));color:var(--ink);border-color:transparent;transform:translateY(-2px)}
+.sparks{position:absolute;inset:0;pointer-events:none}
+.sparks i{position:absolute;width:3px;height:3px;border-radius:50%;opacity:0;animation:spark 6s infinite}
+@keyframes spark{0%,100%{opacity:0;transform:translateY(0)}40%{opacity:.9}70%{opacity:.2;transform:translateY(-20px)}}
+.card{position:relative;width:min(440px,86vw);aspect-ratio:5/7;perspective:1600px;justify-self:center}
+.card .in{position:absolute;inset:0;background:#F7EFE2;color:var(--ink);border-radius:4px;padding:11% 10% 9%;display:flex;flex-direction:column;align-items:center;text-align:center;
+  box-shadow:0 40px 90px rgba(0,0,0,.55),inset 0 0 0 10px #F7EFE2,inset 0 0 0 11px var(--gold),inset 0 0 0 15px #F7EFE2,inset 0 0 0 16px rgba(201,161,90,.55)}
+.card h2{font:400 clamp(26px,4vw,40px)/1 var(--serif);letter-spacing:.24em;margin:7% 0 2%;padding-left:.24em}
+.card .ed{font:italic 400 14px var(--serif);color:var(--mute);margin-bottom:8%}
+.card .cordial{font:400 clamp(24px,3.6vw,34px)/1.1 var(--script);color:var(--wine);margin:0}
+.card .cz{font:700 14px/1 var(--cjk);letter-spacing:.8em;margin:3% 0 8%;padding-left:.8em}
+.card .three{font:500 clamp(14px,1.7vw,17px)/2.1 var(--cjk);letter-spacing:.18em}
+.card .three span{display:block;transition:color .3s}
+.card .three span:nth-child(1){color:#7A1E2C}.card .three span:nth-child(2){color:#B2643C}.card .three span:nth-child(3){color:#3B5B6E}
+.card .three em{display:block;font:italic 400 12px/1.6 var(--serif);letter-spacing:.04em;color:var(--mute);margin-bottom:4px}
+.card .foot{margin-top:auto;color:var(--mute)}
+.card .rsvp{margin-top:10px;color:var(--wine)}
+.flap{position:absolute;inset:0;transform-origin:50% 0;transform-style:preserve-3d;transition:transform 1.3s cubic-bezier(.6,.05,.25,1);z-index:3}
+.flap .face{position:absolute;inset:0;backface-visibility:hidden;border-radius:4px;background:linear-gradient(160deg,#8A2434,#4E1220 70%);box-shadow:0 40px 90px rgba(0,0,0,.55);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--gold2)}
+.flap .face:before{content:"";position:absolute;inset:14px;border:1px solid rgba(227,201,143,.45)}
+.flap .face .t{font:400 24px/1 var(--serif);letter-spacing:.4em;padding-left:.4em}
+.flap .face .s{font:italic 400 15px/1 var(--serif);opacity:.85}
+.flap .back{transform:rotateX(180deg);background:#EFE2CC}
+.card.open .flap{transform:rotateX(-178deg);pointer-events:none}
+.seal{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 38% 34%,#C0485A,#7A1E2C 55%,#4E1220);
+  box-shadow:0 6px 14px rgba(0,0,0,.45),inset 0 -4px 10px rgba(0,0,0,.35),inset 0 3px 6px rgba(255,255,255,.18);transition:transform .3s;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 6px 14px rgba(0,0,0,.45),0 0 0 12px rgba(227,201,143,.12),inset 0 -4px 10px rgba(0,0,0,.35)}}
+.seal:hover{transform:scale(1.07) rotate(-8deg)}
+.seal svg{width:52px}
+@media(max-width:820px){#v-invite .hero{grid-template-columns:1fr;padding-top:40px;padding-bottom:60px;text-align:center}.hero .copy p{margin-inline:auto}.hero .copy .go{justify-content:center}}
+
+/* editor */
+.editor{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(20px,5vw,80px);padding-top:110px;padding-bottom:90px;align-items:start}
+.editor h3{font:italic 400 clamp(40px,5vw,72px)/1 var(--serif);margin:12px 0 0;color:var(--gold2)}
+.editor .sig{font:400 40px/1 var(--script);color:#D97C5B;margin-top:26px}
+.editor p{font-size:clamp(15px,1.4vw,17px);line-height:2.2;letter-spacing:.04em;margin:0 0 1.2em}
+.editor p::first-letter{font-size:2.1em;color:var(--gold2);float:left;line-height:1;margin:.12em .12em 0 0}
+@media(max-width:820px){.editor{grid-template-columns:1fr}}
+
+/* dance card */
+.carnet{position:relative;max-width:1100px;margin:0 auto 120px;background:#F7EFE2;color:var(--ink);border-radius:6px;padding:clamp(24px,5vw,60px) clamp(14px,4vw,60px);
+  box-shadow:0 30px 80px rgba(0,0,0,.5),inset 0 0 0 12px #F7EFE2,inset 0 0 0 13px var(--gold)}
+.carnet .top{text-align:center;margin-bottom:26px}
+.carnet .top .wd{font-size:clamp(36px,5vw,60px);font-style:italic;line-height:1}
+.carnet .top .cj{font-size:15px;letter-spacing:.6em;margin-top:10px}
+.carnet .cnote{text-align:center;font-size:13.5px;color:var(--mute);line-height:1.8;margin:0 auto 24px;max-width:460px}
+.rowh,.row{display:grid;grid-template-columns:48px minmax(0,1.1fr) minmax(0,2fr) minmax(0,1fr) 104px;gap:0 16px;align-items:center}
+.rowh{border-bottom:1px solid var(--ink);padding:0 12px 8px;color:var(--mute)}
+.row{position:relative;padding:13px 12px;border-bottom:1px dotted rgba(32,22,28,.3);isolation:isolate;transition:color .35s}
+.row:before{content:"";position:absolute;inset:0;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.6,0,.2,1);z-index:-1}
+.row:hover:before{transform:scaleX(1)}
+.row:hover{color:var(--gf)}
+.row:hover .no,.row:hover .by,.row:hover .bd,.row:hover .dn .cj{color:var(--gf);opacity:.85}
+.row .no{font:400 13px var(--mono);color:var(--g)}
+.row .dn .wd{font-size:20px;font-style:italic}
+.row .dn .cj{display:block;font-size:12px;color:var(--mute);margin-top:2px;letter-spacing:.1em}
+.row .pt{font:400 clamp(20px,2.2vw,28px)/1.15 var(--script);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;clip-path:inset(0 100% 0 0);transition:clip-path 1.3s cubic-bezier(.5,0,.2,1)}
+.row .pt .zh{font-family:var(--cjk);font-size:.64em;letter-spacing:.05em}
+.row .pt .x{font-family:var(--serif);font-size:.6em;margin:0 .3em;color:var(--g)}
+.row:hover .pt .x{color:var(--gf)}
+.row.inked .pt{clip-path:inset(0 0 0 0)}
+.row .by{font-size:12px;color:var(--mute)}
+.row .bd{font:400 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:right}
+.row .sw{position:absolute;right:12px;bottom:4px;display:flex;gap:2px;opacity:0;transition:opacity .3s}
+.row:hover .sw{opacity:1}.row .sw i{width:10px;height:4px}
+@media(max-width:760px){.rowh{display:none}.row{grid-template-columns:36px minmax(0,1fr);gap:3px 10px}.row>*:nth-child(n+3){grid-column:2}.row .bd{text-align:left}}
+#peek{position:fixed;z-index:70;width:240px;pointer-events:none;opacity:0;transform:translate(16px,-50%) scale(.94) rotate(2deg);transition:opacity .2s,transform .25s;border:5px solid #FFFBF3;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+#peek.on{opacity:1;transform:translate(16px,-50%) scale(1) rotate(-1deg)}
+@media(hover:none){#peek{display:none}}
+
+/* ---------- act gallery ---------- */
+.actHead{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(14px,3vw,40px);align-items:end;padding-top:46px;padding-bottom:30px}
+.actHead .num{font:italic 400 clamp(80px,11vw,160px)/.78 var(--serif);background:linear-gradient(160deg,var(--n1),var(--n2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.actHead h2{font:400 clamp(30px,4vw,58px)/1 var(--serif);margin:0;letter-spacing:.02em}
+.actHead h2 b{font-family:var(--cjk);font-weight:500;font-size:.5em;letter-spacing:.4em;margin-left:.5em;color:var(--acc)}
+.actHead .who{font:italic 400 17px var(--serif);opacity:.7;margin-top:8px}
+.actHead .quote{font-size:16px;letter-spacing:.14em;line-height:1.9;max-width:300px;text-align:right}
+@media(max-width:760px){.actHead{grid-template-columns:auto minmax(0,1fr)}.actHead .quote{grid-column:1/-1;text-align:left;max-width:none}}
+.gal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;padding-bottom:80px}
+.gal.c{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1100px){.gal{grid-template-columns:repeat(4,minmax(0,1fr))}.gal.c{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gal.c{grid-template-columns:1fr}}
+.tile{position:relative;border-radius:6px;overflow:hidden;cursor:pointer;transform:perspective(800px) rotateX(var(--rx,0)) rotateY(var(--ry,0));transition:transform .25s ease,box-shadow .3s;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+.tile img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .7s ease,filter .5s}
+.gal.c .tile img{aspect-ratio:1216/832}
+.tile:hover img{transform:scale(1.06);filter:saturate(1.15)}
+.tile .blk{position:absolute;left:0;right:0;bottom:0;background:var(--g);color:var(--gf);padding:12px 14px 13px;transform:translateY(101%);transition:transform .45s cubic-bezier(.3,1.2,.4,1)}
+.tile:hover .blk,.tile:focus-visible .blk{transform:none}
+.tile .blk .n{font:italic 400 30px/1 var(--serif)}
+.tile .blk .d{font:400 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;margin-top:4px;opacity:.85}
+.tile .blk .p{font:500 14px/1.4 var(--cjk);margin-top:4px;letter-spacing:.04em}
+.tile .no{position:absolute;left:10px;top:10px;font:400 11px var(--mono);color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6);transition:opacity .3s}
+.tile:hover .no{opacity:0}
+.tile .bar{position:absolute;left:0;right:0;top:0;height:4px;display:flex}.tile .bar i{flex:1}
+
+/* ---------- detail viewer ---------- */
+#dv{position:fixed;inset:0;z-index:80;display:none;background:var(--dbg);color:var(--dfg);transition:background .7s,color .7s;overflow:auto}
+#dv.on{display:block}
+#dv .glow{position:fixed;inset:-20%;background:radial-gradient(circle at var(--mx,30%) var(--my,40%),color-mix(in srgb,var(--dacc) 38%,transparent),transparent 45%);pointer-events:none;transition:background .2s}
+.dvtop{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px;background:color-mix(in srgb,var(--dbg) 80%,transparent);backdrop-filter:blur(10px)}
+.acts{display:flex;gap:6px}
+.acts button{padding:8px 14px;border-radius:30px;border:1px solid color-mix(in srgb,var(--dfg) 30%,transparent);transition:all .3s}
+.acts button.on,.acts button:hover{background:var(--dacc);color:var(--dbg);border-color:transparent}
+.dvx{padding:8px 14px;border-radius:30px;border:1px solid color-mix(in srgb,var(--dfg) 30%,transparent)}
+.dvx:hover{background:var(--dfg);color:var(--dbg)}
+.dvb{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:clamp(20px,4vw,60px);align-items:center;min-height:calc(100vh - 58px - 96px);padding-top:10px;padding-bottom:20px}
+.stagep{position:relative;display:grid;place-items:center}
+.stagep img{max-height:calc(100vh - 220px);width:auto;max-width:100%;border-radius:4px;box-shadow:0 30px 70px rgba(0,0,0,.35);cursor:zoom-in;transition:opacity .35s}
+.vars{display:flex;gap:6px;margin-top:12px;justify-content:center}
+.vars button{padding:6px 10px;border-radius:20px;border:1px solid color-mix(in srgb,var(--dfg) 28%,transparent)}
+.vars button.on{background:var(--dfg);color:var(--dbg)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:color-mix(in srgb,var(--dbg) 70%,transparent);border:1px solid color-mix(in srgb,var(--dfg) 30%,transparent);font:400 22px var(--serif);display:grid;place-items:center;z-index:2;transition:all .3s}
+.arrow:hover{background:var(--dacc);color:var(--dbg)}
+.arrow.p{left:-8px}.arrow.n{right:-8px}
+.dos .k{font:400 12px var(--mono);letter-spacing:.2em;color:var(--dacc)}
+.dos h3{font:italic 400 clamp(36px,4vw,64px)/.95 var(--serif);text-wrap:balance;margin:10px 0 4px;color:var(--dacc2)}
+.dos h3.cz{font:500 clamp(24px,2.4vw,36px)/1.25 var(--cjk);font-style:normal;letter-spacing:.04em;margin:10px 0 4px;color:var(--dacc2)}
+.dos .dz{font-size:15px;letter-spacing:.4em;opacity:.8}
+.dos .pair{margin:20px 0 18px;font:400 clamp(30px,3vw,44px)/1.1 var(--script)}
+.dos .pair .zh{font-family:var(--cjk);font-size:.52em;letter-spacing:.06em}
+.dos .pair .x{font-family:var(--serif);font-size:.5em;color:var(--dacc);margin:0 .35em}
+.dos .pair small{display:block;font:400 11px var(--mono);letter-spacing:.14em;opacity:.65;margin-top:8px}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid color-mix(in srgb,var(--dfg) 25%,transparent)}
+.facts>div{padding:11px 0;border-bottom:1px solid color-mix(in srgb,var(--dfg) 14%,transparent)}
+.facts>div:nth-child(odd){padding-right:14px}
+.facts .full{grid-column:1/-1}
+.facts .lab{color:var(--dacc)}
+.facts .v{font-size:15px;margin-top:4px;line-height:1.65}
+.facts .v i{font:italic 400 14px var(--serif);opacity:.7;margin-left:6px}
+.facts .big{font:400 26px/1 var(--mono);color:var(--dacc2)}
+.story{margin-top:16px;padding:18px 20px;border-radius:8px;background:color-mix(in srgb,var(--dfg) 7%,transparent);font-size:15px;line-height:2.05;max-height:34vh;overflow:auto}
+.story h4{margin:0 0 8px;font:500 18px var(--cjk);color:var(--dacc2)}
+.note{margin-top:16px;padding:16px 18px 14px;background:#F3E6CF;color:var(--ink);font-size:14px;line-height:2;transform:rotate(-.8deg);box-shadow:0 10px 24px rgba(0,0,0,.25);
+  background-image:repeating-linear-gradient(transparent 0 27px,rgba(122,30,44,.12) 27px 28px)}
+.note:before{content:"A Note · 紙條";display:block;font:400 22px/1 var(--script);color:var(--wine);margin-bottom:6px}
+.pal{display:flex;margin-top:18px;height:44px;border-radius:6px;overflow:hidden}
+.pal button{flex:1;position:relative;transition:flex .35s}
+.pal button:hover{flex:2.4}
+.pal button span{position:absolute;inset:auto 0 6px;font:400 10px var(--mono);letter-spacing:.06em;opacity:0;transition:opacity .25s}
+.pal button:hover span{opacity:1}
+.rail{position:relative;z-index:1;display:flex;gap:8px;overflow-x:auto;padding:12px 0 22px;scrollbar-width:thin}
+.rail button{flex:0 0 64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid transparent;opacity:.6;transition:all .3s}
+.rail button img{width:100%;height:100%;object-fit:cover}
+.rail button:hover{opacity:1;transform:translateY(-3px)}
+.rail button.on{opacity:1;border-color:var(--dacc)}
+@media(max-width:900px){.dvb{grid-template-columns:1fr}.stagep img{max-height:60vh}.arrow.p{left:4px}.arrow.n{right:4px}.acts button .en{display:none}}
+
+/* ---------- keepsakes ---------- */
+.kwrap{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(20px,4vw,60px);padding-bottom:80px}
+.klist{display:flex;flex-direction:column;gap:2px;max-height:72vh;overflow:auto;padding-right:6px}
+.klist button{text-align:left;display:grid;grid-template-columns:30px 1fr;gap:8px;padding:10px 12px;border-radius:6px;position:relative;isolation:isolate;transition:color .3s}
+.klist button:before{content:"";position:absolute;inset:0;border-radius:6px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .4s;z-index:-1}
+.klist button:hover:before,.klist button.on:before{transform:scaleX(1)}
+.klist button:hover,.klist button.on{color:var(--gf)}
+.klist .n{font:400 11px var(--mono);opacity:.7;padding-top:3px}
+.klist b{font-weight:500;letter-spacing:.04em}
+.kstage{position:relative}
+.kstage h3{font:italic 400 clamp(32px,4vw,56px)/1 var(--serif);margin:0;color:var(--kc)}
+.kstage .sub{opacity:.75;margin-top:8px}
+.kstops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,3vw,40px);margin-top:34px;position:relative}
+.kstops svg{position:absolute;left:0;top:0;width:100%;height:60%;pointer-events:none;overflow:visible}
+.kstop{text-align:center;cursor:pointer}
+.kstop .ci{aspect-ratio:1;border-radius:50%;overflow:hidden;border:4px solid var(--home);box-shadow:0 0 0 2px color-mix(in srgb,var(--kc) 40%,transparent),0 16px 30px rgba(120,70,40,.25);transition:transform .4s,box-shadow .4s}
+.kstop .ci img{width:100%;height:100%;object-fit:cover}
+.kstop.on .ci{transform:scale(1.06);box-shadow:0 0 0 4px var(--kc),0 22px 40px rgba(120,70,40,.32)}
+.kstop .t{margin-top:12px;font:400 11px var(--mono);letter-spacing:.2em;color:var(--kc)}
+.kstop p{margin:6px 0 0;font-size:14.5px;line-height:1.75}
+@media(max-width:760px){.kwrap{grid-template-columns:1fr}.klist{flex-direction:row;overflow-x:auto;max-height:none}.klist button{flex:0 0 auto}}
+
+/* ---------- palette ---------- */
+#v-palette{transition:background .6s}
+.chips{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+@media(max-width:1000px){.chips{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.chip{perspective:900px;aspect-ratio:3/4}
+.chip .fl{position:relative;height:100%;transition:transform .8s cubic-bezier(.4,.1,.2,1);transform-style:preserve-3d;cursor:pointer}
+.chip.on .fl{transform:rotateY(180deg)}
+.chip .fa,.chip .fb{position:absolute;inset:0;backface-visibility:hidden;border-radius:6px;padding:12px;display:flex;flex-direction:column;overflow:hidden}
+.chip .fa{background:var(--g);color:var(--gf);box-shadow:0 10px 24px rgba(0,0,0,.25);transition:transform .3s}
+.chip:hover .fa{transform:translateY(-6px)}
+.chip .fa .n{font:italic 400 40px/1 var(--serif)}
+.chip .fa .nm{margin-top:auto;font:500 16px/1.3 var(--cjk)}
+.chip .fa .nm small{display:block;font:italic 400 13px var(--serif);opacity:.8}
+.chip .fa .hx{font:400 10px var(--mono);letter-spacing:.1em;opacity:.75;margin-top:6px}
+.chip .fb{transform:rotateY(180deg);background:#FBF5EA;color:var(--ink);font-size:12px;line-height:1.55;gap:5px}
+.chip .fb .th{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.chip .fb .th img{aspect-ratio:1;object-fit:cover;border-radius:3px}
+.chip .fb b{font:400 9px var(--mono);letter-spacing:.16em;color:var(--g2)}
+.chip .fb .sc{overflow:auto}
+.pals{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px 30px;margin-top:60px;padding-bottom:60px}
+.pals .p .h{display:flex;justify-content:space-between;font:400 11px var(--mono);letter-spacing:.12em;margin-bottom:6px;opacity:.8}
+.pals .bar{display:flex;height:26px;margin:3px 0;border-radius:4px;overflow:hidden}
+.pals .bar button{flex:1;transition:flex .3s}
+.pals .bar button:hover{flex:3}
+#toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);opacity:0;z-index:95;padding:10px 16px;border-radius:30px;background:#FBF5EA;color:var(--ink);font:400 11px var(--mono);letter-spacing:.12em;transition:all .3s;display:flex;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+#toast i{width:14px;height:14px;border-radius:50%}
+
+/* ---------- models ---------- */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px;padding-bottom:60px}
+.mc{position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;padding:12px;border-radius:10px;isolation:isolate;overflow:hidden;
+  background:color-mix(in srgb,var(--fg) 5%,transparent);transition:color .35s}
+.mc:before{content:"";position:absolute;inset:0;background:var(--g);clip-path:circle(0 at 46px 50%);transition:clip-path .6s cubic-bezier(.5,0,.2,1);z-index:-1}
+.mc:hover:before{clip-path:circle(150% at 46px 50%)}
+.mc:hover{color:var(--gf)}
+.mc img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.mc .nm{font:500 17px/1.4 var(--cjk);letter-spacing:.05em}
+.mc .nm .x{font:italic 400 15px var(--serif);margin:0 .35em;color:var(--g)}
+.mc:hover .nm .x{color:var(--gf)}
+.mc small{display:block;font:400 11px/1.6 var(--mono);letter-spacing:.06em;opacity:.7;margin-top:3px}
+.credits{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;text-align:center;padding:30px 0 70px}
+.credits .v{font:400 30px/1 var(--script);color:var(--acc);margin-top:8px}
+footer{text-align:center;padding:50px 20px 90px;border-top:1px solid color-mix(in srgb,var(--fg) 12%,transparent)}
+footer .wd{font-size:26px;letter-spacing:.4em}
+.next{display:flex;justify-content:space-between;gap:12px;padding-bottom:60px;flex-wrap:wrap}
+
+/* motion */
+.ticker{overflow:hidden;border-top:1px solid color-mix(in srgb,var(--fg) 14%,transparent);border-bottom:1px solid color-mix(in srgb,var(--fg) 14%,transparent);padding:16px 0;white-space:nowrap}
+.ticker .tr{display:inline-flex;gap:46px;animation:tick 60s linear infinite;padding-left:46px}
+.ticker:hover .tr{animation-play-state:paused}
+.ticker a{font:italic 400 clamp(26px,3vw,40px)/1 var(--serif);color:var(--c);transition:transform .3s;display:inline-flex;align-items:baseline;gap:12px}
+.ticker a small{font:400 11px var(--mono);letter-spacing:.2em;color:var(--fg);opacity:.5}
+.ticker a:hover{transform:scale(1.08) rotate(-2deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.hero h1 .ch{display:inline-block;animation:rise 1s cubic-bezier(.2,.8,.2,1) both,sheen 7s ease-in-out infinite alternate;background:linear-gradient(100deg,#F4EADB,#E3C98F 30%,#D97C5B 55%,#B88BD9 80%,#8FC7C0);background-size:400% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .04em .12em}
+.hero h1 .ch:hover{animation:none;transform:translateY(-8px) rotate(-4deg);transition:transform .3s}
+@keyframes rise{from{opacity:0;transform:translateY(60%) rotate(8deg)}}
+.view.on .actHead .num{animation:numIn 1s cubic-bezier(.2,.8,.2,1) both}
+.view.on .actHead h2{animation:rise .9s .12s cubic-bezier(.2,.8,.2,1) both}
+.view.on .actHead .quote{animation:rise .9s .25s cubic-bezier(.2,.8,.2,1) both}
+@keyframes numIn{from{opacity:0;transform:translateX(-40px) scale(.8);filter:blur(6px)}}
+.actHead .num{background-size:200% 200%;animation:none}
+.view.on .actHead .num{animation:numIn 1s cubic-bezier(.2,.8,.2,1) both,hue 6s 1s ease-in-out infinite alternate}
+@keyframes hue{to{background-position:100% 100%}}
+.stagep img.sl{animation:slideL .55s cubic-bezier(.2,.8,.2,1)}.stagep img.sr{animation:slideR .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes slideL{from{opacity:0;transform:translateX(60px) scale(.97)}}@keyframes slideR{from{opacity:0;transform:translateX(-60px) scale(.97)}}
+.dos>*{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.dos>*:nth-child(2){animation-delay:.05s}.dos>*:nth-child(3){animation-delay:.1s}.dos>*:nth-child(4){animation-delay:.15s}.dos>*:nth-child(5){animation-delay:.2s}.dos>*:nth-child(6){animation-delay:.25s}.dos>*:nth-child(7){animation-delay:.3s}
+.pal button{animation:grow .6s cubic-bezier(.3,1.4,.5,1) both}
+.pal button:nth-child(2){animation-delay:.36s}.pal button:nth-child(3){animation-delay:.42s}.pal button:nth-child(4){animation-delay:.48s}.pal button:nth-child(5){animation-delay:.54s}
+@keyframes grow{from{transform:scaleY(0)}}
+.kstop{animation:pop .7s cubic-bezier(.3,1.4,.5,1) both}.kstop:nth-child(3){animation-delay:.12s}.kstop:nth-child(4){animation-delay:.24s}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.8)}}
+.kstops path{stroke-dashoffset:300;animation:draw 1.6s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.kstop .ci img{animation:spin 30s linear infinite paused}.kstop:hover .ci img{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg) scale(1.15)}}
+.seal{animation:pulse 2.4s infinite,wob 4s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(-6deg)}}
+.chip .fa:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.35) 48%,transparent 62%);transform:translateX(-120%);transition:transform .8s}
+.chip:hover .fa:after{transform:translateX(120%)}
+.mc img{transition:transform .5s}.mc:hover img{transform:rotate(-10deg) scale(1.1)}
+#zoom{position:fixed;inset:0;z-index:95;background:rgba(10,7,12,.94);display:none;align-items:center;justify-content:center;cursor:zoom-out}
+#zoom.on{display:flex}#zoom img{max-width:96vw;max-height:94vh;object-fit:contain}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.row .pt{clip-path:none}}
+</style>
+</head>
+<body>
+<nav class="pad">
+  <a href="#invite" class="brand">FLORAISON<i>對影</i></a>
+  <div class="tabs lab" id="tabs">
+    <a href="#invite" data-v="invite" style="--hc:#E3C98F"><span class="en">Invitation</span><b>請柬</b></a>
+    <a href="#ball" data-v="ball" style="--hc:#D97C5B"><span class="en">I · Ball</span><b>舞會</b></a>
+    <a href="#rendezvous" data-v="rendezvous" style="--hc:#E8B4A0"><span class="en">II · Rendez-vous</span><b>約會</b></a>
+    <a href="#athome" data-v="athome" style="--hc:#F0C987"><span class="en">III · Home</span><b>回家</b></a>
+    <a href="#keepsakes" data-v="keepsakes" style="--hc:#C8A2D9"><span class="en">Keepsakes</span><b>信物</b></a>
+    <a href="#palette" data-v="palette" style="--hc:#8FC7C0"><span class="en">Palette</span><b>色譜</b></a>
+    <a href="#models" data-v="models" style="--hc:#E3C98F"><span class="en">Models</span><b>模特</b></a>
+    <a href="programme.html" style="--hc:#D97C5B"><span class="en">Programme</span><b>節目單</b></a>
+    <a href="letters.html" style="--hc:#E8B4A0"><span class="en">Letters</span><b>信箋</b></a>
+  </div>
+</nav>
+
+<!-- INVITATION -->
+<section class="view" id="v-invite">
+  <div class="hero pad">
+    <div class="sparks" id="sparks"></div>
+    <div class="copy">
+      <div class="lab" style="color:var(--gold)">Autumn / Winter 2027 · Issue 03</div>
+      <h1 id="h1">Two by<br>Two</h1>
+      <div class="z">對影</div>
+      <div class="lab" style="opacity:.7">Eighteen Pairs · Fifty-four Looks</div>
+      <p>一夜舞會，一日約會，一扇關上的門。拆開封印，接下這張舞會卡。</p>
+      <div class="go lab"><a class="pill" href="#ball" style="--hc:#D97C5B">Enter the Ball 入場 →</a><a class="pill" href="#dance-card" style="--hc:#E3C98F">Dance Card 舞會卡</a></div>
+    </div>
+    <div class="card" id="inv">
+      <div class="in">
+        <div class="lab" style="color:var(--wine)">Autumn / Winter 2027</div>
+        <h2>FLORAISON</h2>
+        <div class="ed">對影 · Two by Two</div>
+        <p class="cordial">You are cordially invited</p>
+        <div class="cz">謹邀</div>
+        <div class="three"><em>One night at the ball · One day together · One door, closed</em><span>一夜舞會</span><span>一日約會</span><span>一扇關上的門</span></div>
+        <div class="foot lab">Eighteen Pairs · Dress Code: Haute Couture</div>
+        <div class="rsvp lab">RSVP 敬覆 · Two to attend 兩位出席</div>
+      </div>
+      <div class="flap"><div class="face">
+        <div class="t">FLORAISON</div>
+        <button class="seal" id="seal" aria-label="Break the seal 拆封"><svg viewBox="0 0 60 60" fill="none" stroke="#E3C98F" stroke-width="1.6"><circle cx="30" cy="30" r="24" stroke-opacity=".6"/><path d="M19 40c6-2 9-8 11-15 2 7 5 13 11 15M30 25c-3-6-8-8-12-7 2 4 7 7 12 7Zm0 0c3-6 8-8 12-7-2 4-7 7-12 7Z"/></svg></button>
+        <div class="s">Break the seal · 拆封</div>
+      </div><div class="face back"></div></div>
+    </div>
+  </div>
+  <div class="ticker" id="ticker"></div>
+  <div class="editor pad">
+    <div><div class="lab" style="color:var(--gold)">Editor’s Note · 編者的話</div><h3>Petal to Petal,<br>Autumn</h3><div class="sig">Ning An</div><div class="lab" style="opacity:.6;margin-top:6px">Editor-in-Chief 總編輯 · 寧安</div></div>
+    <div id="edtext"></div>
+  </div>
+  <div class="pad" id="dance-card">
+    <div class="carnet">
+      <div class="top"><div class="wd">Carnet de Bal</div><div class="cj">舞會卡</div><div class="lab" style="color:var(--mute);margin-top:10px">Eighteen dances · In order of appearance · 依出場順序</div></div>
+      <p class="cnote">十九世紀的淑女會在手腕上掛一本小冊子，每一支舞的旁邊寫著舞伴的名字。</p>
+      <div class="rowh lab"><span>No.</span><span>Dance 舞曲</span><span>Partners 舞伴</span><span>By 創作者</span><span style="text-align:right">Bond</span></div>
+      <div id="rows"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACT GALLERIES -->
+<section class="view" id="v-ball"><div class="pad">
+  <div class="actHead" style="--n1:#E3C98F;--n2:#D97C5B"><div class="num">I</div><div><h2>The Ball<b>舞會</b></h2><div class="who">In Company · 眾人面前 · Night</div></div><div class="quote">燈全亮著，所有人都在看。</div></div>
+  <div class="gal" data-act="A"></div>
+  <div class="next lab"><a class="pill" href="#invite">← Dance Card 舞會卡</a><a class="pill" href="#rendezvous" style="--hc:#E8B4A0">Dawn 天亮了 → II</a></div>
+</div></section>
+<section class="view" id="v-rendezvous"><div class="pad">
+  <div class="actHead" style="--n1:#7A1E2C;--n2:#D97C5B"><div class="num">II</div><div><h2>The Rendez-vous<b>約會</b></h2><div class="who">À Deux · 兩個人 · Day</div></div><div class="quote">人群散了，只剩兩個人和一個晴天。</div></div>
+  <div class="gal" data-act="B"></div>
+  <div class="next lab"><a class="pill" href="#ball">← I 舞會</a><a class="pill" href="#athome" style="--hc:#F0C987">門把轉了一下 → III</a></div>
+</div></section>
+<section class="view" id="v-athome"><div class="pad">
+  <div class="actHead" style="--n1:#B2643C;--n2:#E0A458"><div class="num">III</div><div><h2>At Home<b>回家</b></h2><div class="who">Alone Together · 只有彼此 · After the door closes</div></div><div class="quote">門關上了，爐子上的水壺開始響。</div></div>
+  <div class="gal c" data-act="C"></div>
+  <div class="next lab"><a class="pill" href="#rendezvous">← II 約會</a><a class="pill" href="#keepsakes" style="--hc:#C8A2D9">Keepsakes 信物 →</a></div>
+</div></section>
+
+<!-- KEEPSAKES -->
+<section class="view" id="v-keepsakes"><div class="pad">
+  <div class="actHead" style="--n1:#7A1E2C;--n2:#C8A2D9"><div class="num">✦</div><div><h2>Keepsakes<b>信物</b></h2><div class="who">Eighteen small things · three stops each</div></div><div class="quote">每一對都有一件跟著走完三幅的小物。點開它，看它停在誰的手上。</div></div>
+  <div class="kwrap"><div class="klist" id="klist"></div><div class="kstage" id="kstage"></div></div>
+</div></section>
+
+<!-- PALETTE -->
+<section class="view" id="v-palette"><div class="pad">
+  <div class="actHead" style="--n1:#8FC7C0;--n2:#D97C5B"><div class="num">◐</div><div><h2>The Palette<b>色譜</b></h2><div class="who">18 Grounds · The Swap 互換</div></div><div class="quote">上排是十八場舞會的背景色。翻過色票，看兩個人的衣服顏色怎麼換過來。</div></div>
+  <div class="chips" id="chips"></div>
+  <div class="pals" id="pals"></div>
+</div></section>
+
+<!-- MODELS -->
+<section class="view" id="v-models"><div class="pad">
+  <div class="actHead" style="--n1:#E3C98F;--n2:#B88BD9"><div class="num">36</div><div><h2>The Models<b>模特</b></h2><div class="who">In pairs · 兩兩出場</div></div><div class="quote lab">Click a pair to see their ball</div></div>
+  <div class="mgrid" id="mgrid"></div>
+  <div class="credits"><div><div class="lab">Editor-in-Chief 總編輯</div><div class="v">Ning An 寧安</div></div><div><div class="lab">Creative Director 創意總監</div><div class="v">Ning An 寧安</div></div><div><div class="lab">Project 企劃</div><div class="v">Petal to Petal Autumn</div></div></div>
+</div>
+<footer class="pad"><div class="wd">FLORAISON</div><div style="margin-top:10px;letter-spacing:.3em">Floraison 對影 · AW27</div><div class="lab" style="margin-top:10px;opacity:.6">Issue 03 · 18 Pairs · 54 Looks · <a href="https://ningan98210-ship-it.github.io/FLORAISON_Spring/" target="_top">Spring 花信</a> · <a href="https://ningan98210-ship-it.github.io/FLORAISON_Summer/" target="_top">Resort 2027</a></div></footer>
+</section>
+
+<!-- DETAIL VIEWER -->
+<div id="dv" role="dialog" aria-modal="true" aria-label="Look">
+  <div class="glow"></div>
+  <div class="dvtop pad"><div class="acts lab" id="dvacts"></div><button class="dvx lab" id="dvx">Close 關閉 ✕</button></div>
+  <div class="dvb pad">
+    <div class="stagep"><button class="arrow p" id="dvp" aria-label="previous">‹</button><img id="dvimg" alt=""><button class="arrow n" id="dvn" aria-label="next">›</button><div class="vars lab" id="dvvars"></div></div>
+    <div class="dos" id="dvdos"></div>
+  </div>
+  <div class="rail pad" id="dvrail"></div>
+</div>
+<img id="peek" alt="">
+<div id="zoom"><img alt=""></div>
+<div id="toast"><i></i><span></span></div>
+
+<script src="data.js"></script><script src="fx.js"></script>
+<script>
+{
+const P=window.PAIRS,$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],pad=n=>String(n).padStart(2,'0'),IMG=f=>'img/'+f;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* colour helpers */
+const rgb=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),hex=a=>'#'+a.map(v=>Math.round(Math.max(0,Math.min(255,v))).toString(16).padStart(2,'0')).join('');
+const lum=h=>{const[r,g,b]=rgb(h).map(v=>{v/=255;return v<=.03928?v/12.92:((v+.055)/1.055)**2.4});return .2126*r+.7152*g+.0722*b};
+const sat=h=>{const c=rgb(h),mx=Math.max(...c),mn=Math.min(...c);return mx?(mx-mn)/mx:0};
+const mix=(a,b,t)=>hex(rgb(a).map((v,i)=>v+(rgb(b)[i]-v)*t));
+const on=h=>lum(h)>.38?'#20161C':'#FBF5EA';
+const vivid=pal=>[...pal].sort((a,b)=>sat(b)*(.4+lum(b))-sat(a)*(.4+lum(a)))[0];
+const nm=p=>`<span class="zh">${esc(p.l.name)}</span><span class="x">&amp;</span><span class="zh">${esc(p.r.name)}</span>`;
+const by=p=>p.l.by===p.r.by?p.l.by:`${p.l.by} · ${p.r.by}`;
+const bond=b=>b==='F'?'Family 家人':'Lovers 戀人';
+const ACT={A:{v:'ball',en:'I · The Ball',zh:'舞會'},B:{v:'rendezvous',en:'II · Rendez-vous',zh:'約會'},C:{v:'athome',en:'III · At Home',zh:'回家'}};
+P.forEach(p=>{p.g=p.ground.hex;p.gf=on(p.g)});
+
+/* shell sync */
+const shell=(()=>{try{return window.parent.FL_SHELL}catch(e){return null}})();
+$$('a[href$=".html"]').forEach(a=>a.addEventListener('click',()=>{try{shell&&shell.sync(a.getAttribute('href').replace('.html',''),'')}catch(_){}}));
+
+/* toast + copy */
+function toast(c,t){const el=$('#toast');el.querySelector('i').style.background=c;el.querySelector('span').textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),1600)}
+async function copy(c){try{await navigator.clipboard.writeText(c);toast(c,'已複製 Copied '+c)}catch(e){toast(c,c)}}
+
+/* invitation */
+{const h=$('#h1');let k=0;h.innerHTML=h.innerHTML.split('<br>').map(w=>[...w].map(ch=>ch===' '?' ':`<span class="ch" style="animation-delay:${.2+k*.06}s,${-(k++)*.7}s;background-position:${k*12}% 0">${ch}</span>`).join('')).join('<br>')}
+{const t=P.map(p=>`<a href="#ball-${p.n}" style="--c:${mix(p.g,'#FFFFFF',lum(p.g)<.08?.45:.12)}"><small>${pad(p.n)}</small>${esc(p.dance.en)}</a>`).join('');$('#ticker').innerHTML=`<div class="tr">${t}${t}</div>`}
+{const s=$('#sparks'),cs=['#E3C98F','#D97C5B','#B88BD9','#8FC7C0'];for(let i=0;i<46;i++){const e=document.createElement('i');const c=cs[i%4];e.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;background:${c};box-shadow:0 0 8px ${c};animation-delay:${Math.random()*6}s;animation-duration:${4+Math.random()*5}s`;s.appendChild(e)}}
+$('#seal').addEventListener('click',()=>$('#inv').classList.add('open'));
+$('#edtext').innerHTML=(window.EDITOR||[]).map(t=>`<p>${esc(t)}</p>`).join('');
+
+/* dance card */
+$('#rows').innerHTML=P.map(p=>`<a class="row" href="#ball-${p.n}" data-n="${p.n}" style="--g:${p.g};--gf:${p.gf}">
+  <span class="no">${pad(p.n)}</span><span class="dn"><span class="wd">${esc(p.dance.en)}</span><span class="cj">${esc(p.dance.zh)}</span></span>
+  <span class="pt">${nm(p)}</span><span class="by">${esc(by(p))}</span><span class="bd">${bond(p.bond)}</span>
+  <span class="sw">${p.img.A.pal.map(c=>`<i style="background:${c}"></i>`).join('')}</span></a>`).join('');
+const peek=$('#peek');
+$$('.row').forEach(r=>{const p=P[r.dataset.n-1];
+  r.addEventListener('mouseenter',()=>{peek.src=IMG(p.img.A.sq||p.img.A.wide);peek.style.borderColor=p.g;peek.classList.add('on')});
+  r.addEventListener('mousemove',e=>{peek.style.left=e.clientX+'px';peek.style.top=e.clientY+'px'});
+  r.addEventListener('mouseleave',()=>peek.classList.remove('on'))});
+
+/* galleries */
+$$('.gal').forEach(g=>{const a=g.dataset.act;
+  g.innerHTML=P.map(p=>{const im=p.img[a],src=a==='C'?im.wide:(im.sq||im.wide),bg=a==='A'?p.g:vivid(im.pal),fg=on(bg);
+  return `<a class="tile rv" href="#${ACT[a].v}-${p.n}" style="--g:${bg};--gf:${fg}"><div class="bar">${im.pal.map(c=>`<i style="background:${c}"></i>`).join('')}</div>
+   <img loading="lazy" src="${IMG(src)}" alt="${esc(p.l.name)} & ${esc(p.r.name)}"><span class="no">${pad(p.n)}</span>
+   <div class="blk"><div class="n">${pad(p.n)}</div><div class="d">${esc(p.dance.en)}</div><div class="p">${esc(p.l.name)} &amp; ${esc(p.r.name)}</div></div></a>`}).join('')});
+$$('.tile').forEach(t=>{t.addEventListener('mousemove',e=>{const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.setProperty('--ry',(x*10)+'deg');t.style.setProperty('--rx',(-y*10)+'deg')});
+  t.addEventListener('mouseleave',()=>{t.style.setProperty('--ry','0deg');t.style.setProperty('--rx','0deg')})});
+
+/* detail viewer */
+const dv=$('#dv');let cur={a:'A',n:1,k:'wide'};
+function themeFor(p,a){const im=p.img[a],v=vivid(im.pal);
+  if(a==='A'){const bg=mix(p.g,'#0E0911',lum(p.g)>.3?.55:.25);return{bg,fg:'#F7EFE2',acc:mix(v,'#FFFFFF',lum(v)<.2?.5:.1),acc2:mix(v,'#FFFFFF',.55)}}
+  const base=a==='B'?'#F2E9DA':'#FFF3E2',bg=mix(base,v,.13),acc=mix(v,'#20161C',lum(v)>.35?.45:.1);return{bg,fg:'#20161C',acc,acc2:mix(acc,'#20161C',.2)}}
+function renderDV(){const p=P[cur.n-1],a=cur.a,im=p.img[a],t=themeFor(p,a);
+  dv.style.setProperty('--dbg',t.bg);dv.style.setProperty('--dfg',t.fg);dv.style.setProperty('--dacc',t.acc);dv.style.setProperty('--dacc2',t.acc2);
+  const k=im[cur.k]?cur.k:'wide';const img=$('#dvimg');img.style.opacity=0;const nsrc=IMG(im[k]);const pre=new Image();pre.onload=()=>{img.src=nsrc;img.style.opacity=1;img.classList.remove('sl','sr');void img.offsetWidth;img.classList.add(cur.dir<0?'sr':'sl')};pre.src=nsrc;
+  try{FX.leaves(im.pal.filter(c=>lum(c)>.03&&lum(c)<.85))}catch(_){}
+  img.alt=`${p.l.name} & ${p.r.name}`;
+  $('#dvvars').innerHTML=['wide','tall','sq'].filter(x=>im[x]).map(x=>`<button class="${x===k?'on':''}" data-k="${x}">${{wide:'Wide 橫',tall:'Tall 直',sq:'Square 方'}[x]}</button>`).join('');
+  $('#dvacts').innerHTML=['A','B','C'].map(x=>`<button class="${x===a?'on':''}" data-a="${x}"><span class="en">${ACT[x].en} </span>${ACT[x].zh}</button>`).join('');
+  const pal=`<div class="pal">${im.pal.map(c=>`<button style="background:${c};color:${on(c)}" data-c="${c}" aria-label="${c}"><span>${c}</span></button>`).join('')}</div>`;
+  let body='';
+  if(a==='A')body=`<div class="k">No. ${pad(p.n)} · Dance Dossier 舞曲檔案</div><h3>${esc(p.dance.en)}</h3><div class="dz">${esc(p.dance.zh)}</div>
+    <div class="pair">${nm(p)}<small>${esc(by(p))} · ${bond(p.bond)}</small></div>
+    <div class="facts"><div><div class="lab">Origin 起源</div><div class="v">${esc(p.dance.origin)}</div></div>
+    <div><div class="lab">Time · Tempo</div><div class="v">${/\d/.test(p.dance.time)?`<span class="big">${esc(p.dance.time)}</span>`:esc(p.dance.time)} ${p.dance.bpm!==p.dance.time?`<span style="opacity:.75">${esc(p.dance.bpm)}${/\d/.test(p.dance.bpm)?' BPM':''}</span>`:''}</div></div>
+    <div class="full"><div class="lab">Hold 抱姿</div><div class="v">${esc(p.dance.hold)}</div></div>
+    <div><div class="lab">Motif 主線</div><div class="v">${esc(p.motif.zh)}<i>${esc(p.motif.en)}</i></div></div>
+    <div><div class="lab">Ground 背景色</div><div class="v"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${p.g};margin-right:7px;vertical-align:-1px;box-shadow:0 0 0 1px rgba(255,255,255,.4)"></span>${esc(p.ground.zh)}<i>${esc(p.ground.en)}</i></div></div></div>
+    ${pal}<div class="note">${esc(p.note)}</div>`;
+  if(a==='B')body=`<div class="k">No. ${pad(p.n)} · Date Dossier 約會檔案</div><h3>Rendez-vous</h3><div class="dz">約會 · Admit Two</div>
+    <div class="pair">${nm(p)}<small>${esc(p.dance.en)} · AW27</small></div>
+    <div class="facts"><div class="full"><div class="lab">Venue 場景</div><div class="v">${esc(p.B.venue)}</div></div>
+    <div class="full"><div class="lab">Gesture 小動作</div><div class="v">${esc(p.B.gesture)}</div></div>
+    <div><div class="lab">Hour 時刻</div><div class="v">${esc(p.B.hour)}</div></div><div><div class="lab">Flora 植物</div><div class="v">${esc(p.B.flora||'—')}</div></div>
+    <div class="full"><div class="lab">Keepsake 信物</div><div class="v">${esc(p.keep.name)}：${esc(p.keep.b)}</div></div></div>${pal}`;
+  if(a==='C')body=`<div class="k">No. ${pad(p.n)} · Recipe Card 食譜卡</div><h3 class="cz">${esc(p.C.dessert)}</h3><div class="dz">＋ ${esc(p.C.drink)}</div>
+    <div class="pair">${nm(p)}</div>
+    <div class="facts"><div class="full"><div class="lab">Keepsake as 信物化身</div><div class="v">${esc(p.C.keep)}</div></div>
+    <div class="full"><div class="lab">Wearing 居家服</div><div class="v">${p.C.wear.map(esc).join('<br>')}</div></div></div>
+    <div class="story"><h4>${esc(p.storyTitle)}</h4>${esc(p.story)}</div>${pal}`;
+  $('#dvdos').innerHTML=body;
+  $('#dvrail').innerHTML=P.map(q=>`<button class="${q.n===p.n?'on':''}" data-n="${q.n}" aria-label="${pad(q.n)}"><img loading="lazy" src="${IMG(q.img[a].sq||q.img[a].wide)}" alt=""></button>`).join('');
+  const r=$('#dvrail .on');r&&r.scrollIntoView({block:'nearest',inline:'center'});
+  $$('#dvdos .pal button').forEach(b=>{b.onmouseenter=()=>dv.style.setProperty('--dacc',b.dataset.c);b.onmouseleave=()=>dv.style.setProperty('--dacc',t.acc);b.onclick=()=>copy(b.dataset.c)});
+}
+function openDV(a,n){cur.dir=(cur.a===a&&n<cur.n&&!(cur.n===18&&n===1))||(cur.n===1&&n===18)?-1:1;cur.a=a;cur.n=n;dv.classList.add('on');document.body.style.overflow='hidden';renderDV()}
+function closeDV(){dv.classList.remove('on');document.body.style.overflow=''}
+$('#dvvars').addEventListener('click',e=>{const b=e.target.closest('button');if(b){cur.k=b.dataset.k;renderDV()}});
+$('#dvacts').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=ACT[b.dataset.a].v+'-'+cur.n});
+$('#dvrail').addEventListener('click',e=>{const b=e.target.closest('button');if(b)location.hash=ACT[cur.a].v+'-'+b.dataset.n});
+const step=d=>location.hash=ACT[cur.a].v+'-'+((cur.n-1+d+18)%18+1);
+$('#dvp').onclick=()=>step(-1);$('#dvn').onclick=()=>step(1);
+$('#dvx').onclick=()=>location.hash=ACT[cur.a].v;
+$('#dvimg').onclick=()=>{$('#zoom img').src=$('#dvimg').src;$('#zoom').classList.add('on')};$('#zoom').onclick=()=>$('#zoom').classList.remove('on');
+dv.addEventListener('mousemove',e=>{dv.style.setProperty('--mx',e.clientX/innerWidth*100+'%');dv.style.setProperty('--my',e.clientY/innerHeight*100+'%')});
+addEventListener('keydown',e=>{if($('#zoom').classList.contains('on')){if(e.key==='Escape')$('#zoom').classList.remove('on');return}
+  if(!dv.classList.contains('on'))return;if(e.key==='Escape')$('#dvx').click();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+let tx=null;dv.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});dv.addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>60)step(d<0?1:-1);tx=null});
+
+/* keepsakes */
+let kn=1;
+$('#klist').innerHTML=P.map(p=>`<button data-n="${p.n}" style="--g:${p.g};--gf:${p.gf}"><span class="n">${pad(p.n)}</span><b>${esc(p.keep.name)}</b></button>`).join('');
+function renderK(n,s){kn=n;const p=P[n-1],kc=mix(vivid(p.img.A.pal),'#20161C',.25);s=s||'A';
+  $$('#klist button').forEach(b=>b.classList.toggle('on',+b.dataset.n===n));
+  $('#kstage').style.setProperty('--kc',kc);
+  $('#kstage').innerHTML=`<div class="lab" style="color:${kc}">No. ${pad(n)} · ${esc(p.l.name)} &amp; ${esc(p.r.name)}</div><h3>${esc(p.keep.name)}</h3><div class="sub">${esc(p.dance.en)} · ${esc(p.motif.zh)}</div>
+   <div class="kstops"><svg viewBox="0 0 300 100" preserveAspectRatio="none"><path d="M50 50 Q100 0 150 50 T250 50" fill="none" stroke="${kc}" stroke-width="1.2" stroke-dasharray="4 5" vector-effect="non-scaling-stroke"/></svg>
+   ${['A','B','C'].map((x,i)=>`<div class="kstop${x===s?' on':''}" data-s="${x}"><div class="ci"><img src="${IMG(p.img[x].sq||p.img[x].wide)}" alt=""></div><div class="t">${x} · ${['舞會 Ball','約會 Date','回家 Home'][i]}</div><p>${esc(p.keep[x.toLowerCase()])}</p></div>`).join('')}</div>`;
+  $$('.kstop').forEach(k=>k.onclick=()=>location.hash=ACT[k.dataset.s].v+'-'+n)}
+$('#klist').addEventListener('click',e=>{const b=e.target.closest('button');if(b)renderK(+b.dataset.n)});
+renderK(1);
+
+/* palette */
+const pv=$('#v-palette');
+$('#chips').innerHTML=P.map(p=>`<div class="chip rv" style="--g:${p.g};--gf:${p.gf};--g2:${mix(p.g,'#20161C',.3)}"><div class="fl" tabindex="0" role="button" aria-label="${esc(p.ground.zh)}">
+  <div class="fa"><span class="n">${pad(p.n)}</span><span class="nm">${esc(p.ground.zh)}<small>${esc(p.ground.en)}</small></span><span class="hx">${p.g}</span></div>
+  <div class="fb"><div class="th">${['A','B','C'].map(s=>`<img src="${IMG(p.img[s].sq||p.img[s].wide)}" alt="">`).join('')}</div><b>THE SWAP · ${pad(p.n)}</b><div class="sc">${p.swap?['A','B','C'].map((s,i)=>p.swap[i]?`<div><b>${s}</b> ${esc(p.swap[i])}</div>`:'').join(''):'這一對沒有換顏色，各自穿著自己的顏色走完三幕。'}</div></div>
+  </div></div>`).join('');
+$$('.chip').forEach((c,i)=>{const p=P[i],f=c.querySelector('.fl');
+  c.addEventListener('mouseenter',()=>{pv.style.background=mix(p.g,'#0E0911',.55);document.documentElement.style.setProperty('--acc',mix(p.g,'#FFFFFF',.35))});
+  c.addEventListener('mouseleave',()=>{pv.style.background='';document.documentElement.style.setProperty('--acc','#8FC7C0')});
+  const t=()=>c.classList.toggle('on');f.addEventListener('click',t);f.addEventListener('keydown',e=>{if(e.key==='Enter')t()})});
+$('#pals').innerHTML=P.map(p=>`<div class="p rv"><div class="h"><span>${pad(p.n)} · ${esc(p.dance.en)}</span><span>A · B · C</span></div>${['A','B','C'].map(s=>`<div class="bar">${p.img[s].pal.map(c=>`<button style="background:${c}" data-c="${c}" title="${s} · ${c}" aria-label="${c}"></button>`).join('')}</div>`).join('')}</div>`).join('');
+$('#pals').addEventListener('click',e=>{const b=e.target.closest('button');if(b)copy(b.dataset.c)});
+$('#pals').addEventListener('mouseover',e=>{const b=e.target.closest('button');if(b)pv.style.background=mix(b.dataset.c,'#0E0911',.6)});
+$('#pals').addEventListener('mouseleave',()=>pv.style.background='');
+
+/* models */
+$('#mgrid').innerHTML=P.map(p=>`<a class="mc rv" href="#ball-${p.n}" style="--g:${p.g};--gf:${p.gf}"><img loading="lazy" src="${IMG(p.img.A.sq||p.img.A.wide)}" alt=""><div><div class="nm">${esc(p.l.name)}<span class="x">&amp;</span>${esc(p.r.name)}</div><small>${pad(p.n)} · ${esc(p.dance.en)} · ${esc(p.l.by)}${p.l.by!==p.r.by?' / '+esc(p.r.by):''}</small></div></a>`).join('');
+
+/* router */
+const THEME={invite:['#1A1220','#F4EADB','#E3C98F'],ball:['#1A1220','#F4EADB','#D97C5B'],rendezvous:['#F2E9DA','#20161C','#7A1E2C'],athome:['#FFF3E2','#20161C','#B2643C'],keepsakes:['#FFF3E2','#20161C','#7A1E2C'],palette:['#1A1220','#F4EADB','#8FC7C0'],models:['#140E18','#F4EADB','#E3C98F']};
+let inkDone=false;const LEAF={invite:['#C9A15A','#E3C98F','#7A1E2C','#D97C5B'],ball:P.map(p=>p.g).filter(c=>lum(c)>.03),rendezvous:['#D97C5B','#B2643C','#E0A458','#9C3302','#C9A15A'],athome:['#E0A458','#B2643C','#F0C987','#A77106'],keepsakes:['#C8A2D9','#7A1E2C','#E8B4A0'],palette:P.map(p=>p.g),models:['#E3C98F','#B88BD9','#D97C5B']};
+function route(){let h=location.hash.slice(1)||'invite';let m=h.match(/^(ball|rendezvous|athome)-(\d+)$/),view=h;
+  if(h==='dance-card')view='invite';
+  if(m){view=m[1]}
+  if(!THEME[view])view='invite';
+  $$('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+view));
+  $$('#tabs a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===view));{const ta=$('#tabs a.on'),tb=$('#tabs');if(ta)tb.scrollTo({left:ta.offsetLeft-tb.clientWidth/2+ta.clientWidth/2,behavior:'smooth'})}
+  const t=THEME[view],r=document.documentElement.style;r.setProperty('--bg',t[0]);r.setProperty('--fg',t[1]);r.setProperty('--acc',t[2]);
+  const V=$('#v-'+view);if(!m&&V&&window.FX){FX.replay(V);FX.leaves(LEAF[view])}
+  if(m){const a=Object.keys(ACT).find(k=>ACT[k].v===m[1]);openDV(a,+m[2])}else{closeDV();if(h==='dance-card')setTimeout(()=>$('#dance-card').scrollIntoView({behavior:'smooth'}),60);else scrollTo(0,0)}
+  if(view==='invite'&&!inkDone){inkDone=true;const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){$$('.row').forEach((r,i)=>setTimeout(()=>r.classList.add('inked'),i*110));io.disconnect()}},{threshold:.15});io.observe($('#rows'))}
+  try{shell&&shell.sync('ball',location.hash,document.title)}catch(_){}}
+addEventListener('hashchange',route);route();
+}
+</script>
+</body>
+</html>
